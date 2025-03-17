@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background: linear-gradient(135deg, #fa4242, #782cf3);
+            color: #fff;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 10%;
+            background: linear-gradient(135deg, #4fb3d8, #c80ad2);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+        .profile-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .profile-picture {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 10px solid;
+            animation: borderAnimation 2s infinite alternate;
+        }
+        @keyframes borderAnimation {
+            0% { border-color: #37f312; }
+            50% { border-color: #f50dce; }
+            100% { border-color: #eff3f6; }
+        }
+        .hero {
+            text-align: center;
+            text-transform: capitalize;
+            background: url('https://source.unsplash.com/1600x900/?technology') center/cover no-repeat;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 50px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .card {
+            background: rgb(12, 12, 12);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            color: #fbf5f5;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: white;
+            font-size: 20px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: #f39c12;
+        }
+        .download-button {
+            background-color: #f39c12;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .download-button:hover {
+            background-color: #d68910;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Devendran V</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="profile-container">
+        <img src="my image.jpeg" alt="Upload Profile" class="profile-picture">
+    </div>
+    
+    <section class="hero">
+        <h1> I am Devendran</h1>
+        <h1>Welcome to My Portfolio</h1>
+        <p>ComputerScience student | Web Developer | Tech Enthusiast</p>
+    </section>
+    
+    <div class="container" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            <p>I’m a second-year Computer Science student passionate about Full Stack Development. I build scalable and interactive web applications using modern technologies like JavaScript, React, and the MERN stack. Constantly exploring new frameworks and cloud solutions, I aim to create seamless and efficient digital experiences.</p>
+        </div>
+    </div>
+    <div class="container" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="grid">
+            <div class="card">
+                <h1>Bsc.computerScience</h1>
+                 <p>2023-2026</p>
+                 <h3>SUGUNA COLLEGE OF ARTS AND SCIENCE-COIMBATORE</h3>
+                 <h1>higher secondry</h1>
+                 <p>2022-2023</p>
+                 <h3>XAVIERS HIGHER SECONDRY SCHOOL-KODAIKANAL</h3>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="grid">
+            <div class="card">MERN Stack</div>
+            <div class="card">Cloud Computing</div>
+            <div class="card">java</div>
+            <div class="card">word press development</div>
+            <div class="card">pompt managing</div>
+        </div>
+    </div>
+    
+    <div class="container" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="grid">
+            <div class="card"><a href="#">E-Cart Website</a></div>
+            <div class="card"><a href="">quiz_web</a></div>
+            <div class="card"><a href="#">IBM Chatbot</a></div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <footer class="footer">
+            <p>&copy; 2025 devendran v | All Rights Reserved</p>
+            <div class="social-link">
+                <a href="https://www.linkedin.com/in/scas-devendran-ab4849300/">linkdin</a>
+                <a href="https://github.com/deven615?tab=repositories">gitub</a>
+                 <a href="">email</a>
+            </div>
+                <a href=""></a>
+               
+            </div>
+            <a href="WhatsApp Image 2025-03-17 at 5.58.42 PM.jpeg" download=" My-resume" class="download-button">Download CV</a>
+        </footer>
+        
+</body>
+</html>
